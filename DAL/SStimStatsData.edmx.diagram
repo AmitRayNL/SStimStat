@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6396666c97894463a625f34f8f57d3f6" Name="Diagram1">
+        <EntityTypeShape EntityType="raysstim_statsModel.f_alpha_0_025" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="raysstim_statsModel.f_alpha_0_05" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="raysstim_statsModel.user_profile" Width="1.5" PointX="6.5" PointY="3.5" />
+        <EntityTypeShape EntityType="raysstim_statsModel.t_distribution" Width="1.5" PointX="6.5" PointY="0.75" />
+        <EntityTypeShape EntityType="raysstim_statsModel.z_distribution" Width="1.5" PointX="4.625" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="raysstim_statsModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="f_alpha_0_025">
+          <Key>
+            <PropertyRef Name="denom_df" />
+          </Key>
+          <Property Name="denom_df" Type="smallint" Nullable="false" />
+          <Property Name="ndf_1" Type="float" />
+          <Property Name="ndf_2" Type="float" />
+          <Property Name="ndf_3" Type="float" />
+          <Property Name="ndf_4" Type="float" />
+          <Property Name="ndf_5" Type="float" />
+          <Property Name="ndf_6" Type="float" />
+          <Property Name="ndf_7" Type="float" />
+          <Property Name="ndf_8" Type="float" />
+          <Property Name="ndf_9" Type="float" />
+          <Property Name="ndf_10" Type="float" />
+          <Property Name="ndf_12" Type="float" />
+          <Property Name="ndf_15" Type="float" />
+          <Property Name="ndf_20" Type="float" />
+          <Property Name="ndf_24" Type="float" />
+          <Property Name="ndf_30" Type="float" />
+          <Property Name="ndf_40" Type="float" />
+          <Property Name="ndf_60" Type="float" />
+          <Property Name="ndf_120" Type="float" />
+        </EntityType>
+        <EntityType Name="f_alpha_0_05">
+          <Key>
+            <PropertyRef Name="denom_df" />
+          </Key>
+          <Property Name="denom_df" Type="smallint" Nullable="false" />
+          <Property Name="ndf_1" Type="float" />
+          <Property Name="ndf_2" Type="float" />
+          <Property Name="ndf_3" Type="float" />
+          <Property Name="ndf_4" Type="float" />
+          <Property Name="ndf_5" Type="float" />
+          <Property Name="ndf_6" Type="float" />
+          <Property Name="ndf_7" Type="float" />
+          <Property Name="ndf_8" Type="float" />
+          <Property Name="ndf_9" Type="float" />
+          <Property Name="ndf_10" Type="float" />
+          <Property Name="ndf_12" Type="float" />
+          <Property Name="ndf_15" Type="float" />
+          <Property Name="ndf_20" Type="float" />
+          <Property Name="ndf_24" Type="float" />
+          <Property Name="ndf_30" Type="float" />
+          <Property Name="ndf_40" Type="float" />
+          <Property Name="ndf_60" Type="float" />
+          <Property Name="ndf_120" Type="float" />
+        </EntityType>
+        <EntityType Name="t_distribution">
+          <Key>
+            <PropertyRef Name="df" />
+          </Key>
+          <Property Name="df" Type="int" Nullable="false" />
+          <Property Name="c_0.25" Type="float" />
+          <Property Name="c_0.1" Type="float" />
+          <Property Name="c_0.05" Type="float" />
+          <Property Name="c_0.025" Type="float" />
+          <Property Name="c_0.01" Type="float" />
+          <Property Name="c_0.005" Type="float" />
+        </EntityType>
+        <EntityType Name="user_profile">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="sign_in_domain" />
+            <PropertyRef Name="user_status" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="sign_in_domain" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="user_status" Type="tinyint" Nullable="false" />
+          <Property Name="first_name" Type="varchar" MaxLength="25" />
+          <Property Name="last_name" Type="varchar" MaxLength="45" />
+          <Property Name="status_change_on" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="z_distribution">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="smallint" Nullable="false" />
+          <Property Name="Z" Type="float" />
+          <Property Name="c_0" Type="float" />
+          <Property Name="c_0.01" Type="float" />
+          <Property Name="c_0.02" Type="float" />
+          <Property Name="c_0.03" Type="float" />
+          <Property Name="c_0.04" Type="float" />
+          <Property Name="c_0.05" Type="float" />
+          <Property Name="c_0.06" Type="float" />
+          <Property Name="c_0.07" Type="float" />
+          <Property Name="c_0.08" Type="float" />
+          <Property Name="c_0.09" Type="float" />
+        </EntityType>
+        <EntityContainer Name="raysstim_statsModelStoreContainer">
+          <EntitySet Name="f_alpha_0_025" EntityType="Self.f_alpha_0_025" Schema="raysstim_stats" Table="f_alpha_0.025" store:Type="Tables" />
+          <EntitySet Name="f_alpha_0_05" EntityType="Self.f_alpha_0_05" Schema="raysstim_stats" Table="f_alpha_0.05" store:Type="Tables" />
+          <EntitySet Name="t_distribution" EntityType="Self.t_distribution" Schema="raysstim_stats" store:Type="Tables" />
+          <EntitySet Name="user_profile" EntityType="Self.user_profile" Schema="raysstim_stats" store:Type="Tables" />
+          <EntitySet Name="z_distribution" EntityType="Self.z_distribution" Schema="raysstim_stats" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="raysstim_statsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="f_alpha_0_025">
+          <Key>
+            <PropertyRef Name="denom_df" />
+          </Key>
+          <Property Name="denom_df" Type="Int16" Nullable="false" />
+          <Property Name="ndf_1" Type="Single" />
+          <Property Name="ndf_2" Type="Single" />
+          <Property Name="ndf_3" Type="Single" />
+          <Property Name="ndf_4" Type="Single" />
+          <Property Name="ndf_5" Type="Single" />
+          <Property Name="ndf_6" Type="Single" />
+          <Property Name="ndf_7" Type="Single" />
+          <Property Name="ndf_8" Type="Single" />
+          <Property Name="ndf_9" Type="Single" />
+          <Property Name="ndf_10" Type="Single" />
+          <Property Name="ndf_12" Type="Single" />
+          <Property Name="ndf_15" Type="Single" />
+          <Property Name="ndf_20" Type="Single" />
+          <Property Name="ndf_24" Type="Single" />
+          <Property Name="ndf_30" Type="Single" />
+          <Property Name="ndf_40" Type="Single" />
+          <Property Name="ndf_60" Type="Single" />
+          <Property Name="ndf_120" Type="Single" />
+        </EntityType>
+        <EntityType Name="f_alpha_0_05">
+          <Key>
+            <PropertyRef Name="denom_df" />
+          </Key>
+          <Property Name="denom_df" Type="Int16" Nullable="false" />
+          <Property Name="ndf_1" Type="Single" />
+          <Property Name="ndf_2" Type="Single" />
+          <Property Name="ndf_3" Type="Single" />
+          <Property Name="ndf_4" Type="Single" />
+          <Property Name="ndf_5" Type="Single" />
+          <Property Name="ndf_6" Type="Single" />
+          <Property Name="ndf_7" Type="Single" />
+          <Property Name="ndf_8" Type="Single" />
+          <Property Name="ndf_9" Type="Single" />
+          <Property Name="ndf_10" Type="Single" />
+          <Property Name="ndf_12" Type="Single" />
+          <Property Name="ndf_15" Type="Single" />
+          <Property Name="ndf_20" Type="Single" />
+          <Property Name="ndf_24" Type="Single" />
+          <Property Name="ndf_30" Type="Single" />
+          <Property Name="ndf_40" Type="Single" />
+          <Property Name="ndf_60" Type="Single" />
+          <Property Name="ndf_120" Type="Single" />
+        </EntityType>
+        <EntityContainer Name="raysstim_statsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="f_alpha_0_025" EntityType="Self.f_alpha_0_025" />
+          <EntitySet Name="f_alpha_0_05" EntityType="Self.f_alpha_0_05" />
+          <EntitySet Name="user_profile" EntityType="raysstim_statsModel.user_profile" />
+          <EntitySet Name="t_distribution" EntityType="raysstim_statsModel.t_distribution" />
+          <EntitySet Name="z_distribution" EntityType="raysstim_statsModel.z_distribution" />
+        </EntityContainer>
+        <EntityType Name="user_profile">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="sign_in_domain" />
+            <PropertyRef Name="user_status" />
+          </Key>
+          <Property Name="id" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="sign_in_domain" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="user_status" Type="SByte" Nullable="false" />
+          <Property Name="first_name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="last_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="status_change_on" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_distribution">
+          <Key>
+            <PropertyRef Name="df" />
+          </Key>
+          <Property Name="df" Type="Int32" Nullable="false" />
+          <Property Name="c_0_25" Type="Single" />
+          <Property Name="c_0_1" Type="Single" />
+          <Property Name="c_0_05" Type="Single" />
+          <Property Name="c_0_025" Type="Single" />
+          <Property Name="c_0_01" Type="Single" />
+          <Property Name="c_0_005" Type="Single" />
+        </EntityType>
+        <EntityType Name="z_distribution">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int16" Nullable="false" />
+          <Property Name="Z" Type="Single" />
+          <Property Name="c_0" Type="Single" />
+          <Property Name="c_0_01" Type="Single" />
+          <Property Name="c_0_02" Type="Single" />
+          <Property Name="c_0_03" Type="Single" />
+          <Property Name="c_0_04" Type="Single" />
+          <Property Name="c_0_05" Type="Single" />
+          <Property Name="c_0_06" Type="Single" />
+          <Property Name="c_0_07" Type="Single" />
+          <Property Name="c_0_08" Type="Single" />
+          <Property Name="c_0_09" Type="Single" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="raysstim_statsModelStoreContainer" CdmEntityContainer="raysstim_statsEntities">
+          <EntitySetMapping Name="f_alpha_0_025">
+            <EntityTypeMapping TypeName="raysstim_statsModel.f_alpha_0_025">
+              <MappingFragment StoreEntitySet="f_alpha_0_025">
+                <ScalarProperty Name="denom_df" ColumnName="denom_df" />
+                <ScalarProperty Name="ndf_1" ColumnName="ndf_1" />
+                <ScalarProperty Name="ndf_2" ColumnName="ndf_2" />
+                <ScalarProperty Name="ndf_3" ColumnName="ndf_3" />
+                <ScalarProperty Name="ndf_4" ColumnName="ndf_4" />
+                <ScalarProperty Name="ndf_5" ColumnName="ndf_5" />
+                <ScalarProperty Name="ndf_6" ColumnName="ndf_6" />
+                <ScalarProperty Name="ndf_7" ColumnName="ndf_7" />
+                <ScalarProperty Name="ndf_8" ColumnName="ndf_8" />
+                <ScalarProperty Name="ndf_9" ColumnName="ndf_9" />
+                <ScalarProperty Name="ndf_10" ColumnName="ndf_10" />
+                <ScalarProperty Name="ndf_12" ColumnName="ndf_12" />
+                <ScalarProperty Name="ndf_15" ColumnName="ndf_15" />
+                <ScalarProperty Name="ndf_20" ColumnName="ndf_20" />
+                <ScalarProperty Name="ndf_24" ColumnName="ndf_24" />
+                <ScalarProperty Name="ndf_30" ColumnName="ndf_30" />
+                <ScalarProperty Name="ndf_40" ColumnName="ndf_40" />
+                <ScalarProperty Name="ndf_60" ColumnName="ndf_60" />
+                <ScalarProperty Name="ndf_120" ColumnName="ndf_120" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="f_alpha_0_05">
+            <EntityTypeMapping TypeName="raysstim_statsModel.f_alpha_0_05">
+              <MappingFragment StoreEntitySet="f_alpha_0_05">
+                <ScalarProperty Name="denom_df" ColumnName="denom_df" />
+                <ScalarProperty Name="ndf_1" ColumnName="ndf_1" />
+                <ScalarProperty Name="ndf_2" ColumnName="ndf_2" />
+                <ScalarProperty Name="ndf_3" ColumnName="ndf_3" />
+                <ScalarProperty Name="ndf_4" ColumnName="ndf_4" />
+                <ScalarProperty Name="ndf_5" ColumnName="ndf_5" />
+                <ScalarProperty Name="ndf_6" ColumnName="ndf_6" />
+                <ScalarProperty Name="ndf_7" ColumnName="ndf_7" />
+                <ScalarProperty Name="ndf_8" ColumnName="ndf_8" />
+                <ScalarProperty Name="ndf_9" ColumnName="ndf_9" />
+                <ScalarProperty Name="ndf_10" ColumnName="ndf_10" />
+                <ScalarProperty Name="ndf_12" ColumnName="ndf_12" />
+                <ScalarProperty Name="ndf_15" ColumnName="ndf_15" />
+                <ScalarProperty Name="ndf_20" ColumnName="ndf_20" />
+                <ScalarProperty Name="ndf_24" ColumnName="ndf_24" />
+                <ScalarProperty Name="ndf_30" ColumnName="ndf_30" />
+                <ScalarProperty Name="ndf_40" ColumnName="ndf_40" />
+                <ScalarProperty Name="ndf_60" ColumnName="ndf_60" />
+                <ScalarProperty Name="ndf_120" ColumnName="ndf_120" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_profile">
+            <EntityTypeMapping TypeName="raysstim_statsModel.user_profile">
+              <MappingFragment StoreEntitySet="user_profile">
+                <ScalarProperty Name="status_change_on" ColumnName="status_change_on" />
+                <ScalarProperty Name="last_name" ColumnName="last_name" />
+                <ScalarProperty Name="first_name" ColumnName="first_name" />
+                <ScalarProperty Name="user_status" ColumnName="user_status" />
+                <ScalarProperty Name="sign_in_domain" ColumnName="sign_in_domain" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_distribution">
+            <EntityTypeMapping TypeName="raysstim_statsModel.t_distribution">
+              <MappingFragment StoreEntitySet="t_distribution">
+                <ScalarProperty Name="c_0_005" ColumnName="c_0.005" />
+                <ScalarProperty Name="c_0_01" ColumnName="c_0.01" />
+                <ScalarProperty Name="c_0_025" ColumnName="c_0.025" />
+                <ScalarProperty Name="c_0_05" ColumnName="c_0.05" />
+                <ScalarProperty Name="c_0_1" ColumnName="c_0.1" />
+                <ScalarProperty Name="c_0_25" ColumnName="c_0.25" />
+                <ScalarProperty Name="df" ColumnName="df" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="z_distribution">
+            <EntityTypeMapping TypeName="raysstim_statsModel.z_distribution">
+              <MappingFragment StoreEntitySet="z_distribution">
+                <ScalarProperty Name="c_0_09" ColumnName="c_0.09" />
+                <ScalarProperty Name="c_0_08" ColumnName="c_0.08" />
+                <ScalarProperty Name="c_0_07" ColumnName="c_0.07" />
+                <ScalarProperty Name="c_0_06" ColumnName="c_0.06" />
+                <ScalarProperty Name="c_0_05" ColumnName="c_0.05" />
+                <ScalarProperty Name="c_0_04" ColumnName="c_0.04" />
+                <ScalarProperty Name="c_0_03" ColumnName="c_0.03" />
+                <ScalarProperty Name="c_0_02" ColumnName="c_0.02" />
+                <ScalarProperty Name="c_0_01" ColumnName="c_0.01" />
+                <ScalarProperty Name="c_0" ColumnName="c_0" />
+                <ScalarProperty Name="Z" ColumnName="Z" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
